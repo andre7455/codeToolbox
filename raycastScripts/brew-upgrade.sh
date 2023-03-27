@@ -10,9 +10,10 @@
 
 # Documentation:
 # @raycast.author andre
-echo "starting upgrade";
-brew update;
-echo "downloaded updates, installing";
-brew upgrade;
-echo "cleaning up";
-brew autoremove; brew cleanup;
+echo "starting upgrade"
+brew update
+echo "downloaded updates, installing"
+brew upgrade
+echo "cleaning up"
+brew autoremove
+brew cleanup 
