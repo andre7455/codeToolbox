@@ -11,9 +11,9 @@
 # Documentation:
 # @raycast.author andre
 echo "starting upgrade" &&
-brew update &&
-echo "downloaded updates, installing" %%
-brew upgrade &&
+brew -q update &&
+echo "downloaded updates, installing";
+brew -q upgrade &&
 echo "cleaning up" &&
-brew autoremove &&
+brew -q autoremove &&
 brew cleanup;
