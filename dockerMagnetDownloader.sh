@@ -9,7 +9,7 @@ fi
 MAGNET_LINK="$1"
 
 # Create a Docker container to download the torrent via the magnet link
-CONTAINER_NAME="transmission-container"
+CONTAINER_NAME="transmission-container-$RANDOM"
 DOWNLOAD_DIR=$PWD
 
 docker run --rm -d \
