@@ -11,14 +11,17 @@ def compare_files(file1, file2, hashes):
 def delete_duplicate_files():
     hashes = {}
     files_processed = set()
-    for root, dirs, files in os.walk('.'):
+    for root, files in os.walk('.'):
         for file in files:
             full_path = os.path.join(root, file)
             with open(full_path, 'rb') as f:
                 hashes[full_path] = hashlib.md5(f.read()).hexdigest()
             files_processed.add(full_path)
 
-    for root, dirs, files in os.walk('.'):
+#ik hou van jou es
+
+
+    for root, files in os.walk('.'):
         for file1 in files:
             full_path1 = os.path.join(root, file1)
             if full_path1 in files_processed:
